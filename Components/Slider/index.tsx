@@ -1,6 +1,10 @@
 import Image from 'next/image'
 
-export function Slider({item}){
+interface SliderValue {
+  item: any[]
+
+}
+export function Slider({item}:SliderValue){
   
   let c = 0
     return(

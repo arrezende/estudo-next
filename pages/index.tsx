@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import {Header} from './Components/Header'
-import { Slider } from './Components/Slider'
-import { Card } from './Components/Card'
-import { Cta } from './Components/Cta'
-import { Footer } from './Components/Footer'
+import {Header} from '../Components/Header'
+import { Slider } from '../Components/Slider'
+import { Card } from '../Components/Card'
+import { Cta } from '../Components/Cta'
+import { Footer } from '../Components/Footer'
 
 export default function Home() {
   return (
@@ -16,8 +16,7 @@ export default function Home() {
       <Header />
       <Slider
         item={['/666.png', '/fff.png']}  
-      >
-      </Slider>
+      />
       <div className="site-section bg-light pt-5">
         <div className="container">
           <div className="row">

@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import { Breadcrumb } from './Components/Breadcrumb'
-import { Footer } from './Components/Footer'
-import {Header} from './Components/Header'
+import { Breadcrumb } from '../Components/Breadcrumb'
+import { Footer } from '../Components/Footer'
+import {Header} from '../Components/Header'
 
 export default function Sobre(){
     return(

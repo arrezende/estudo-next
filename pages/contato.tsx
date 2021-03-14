@@ -1,12 +1,13 @@
+import React from 'react'
 import Head from 'next/head'
-import { Breadcrumb } from './Components/Breadcrumb'
-import { Footer } from './Components/Footer'
-import {Header} from './Components/Header'
-import { Mapa } from './Components/Mapa'
+import { Breadcrumb } from '../Components/Breadcrumb'
+import { Footer } from '../Components/Footer'
+import { Mapa } from '../Components/Mapa'
+import { Header } from '../Components/Header'
 
 export default function Contato(){
     return(
-        <>
+        <React.Fragment>
             <Head>
                 <title>Contato</title>
             </Head>
@@ -22,14 +23,14 @@ export default function Contato(){
 
                     <div className="row">
                         <div className="col-12">
-                        <h2 className="contact-title">Entre em Contato</h2>
+                            <h2 className="contact-title">Entre em Contato</h2>
                         </div>
                         <div className="col-lg-8">
-                        <form className="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                            <form className="form-contact contact_form" action="#" method="post">
                             <div className="row">
                             <div className="col-12">
                                 <div className="form-group">
-                                    <textarea className="form-control w-100" name="message" id="message" cols="30" rows="9" placeholder="Mensagem"></textarea>
+                                    <textarea className="form-control w-100" name="message" id="message" placeholder="Mensagem"></textarea>
                                 </div>
                             </div>
                             <div className="col-sm-6">
@@ -86,6 +87,6 @@ export default function Contato(){
                 </div>
             </section>
             <Footer></Footer>
-        </>
+        </React.Fragment>
     )
 }
