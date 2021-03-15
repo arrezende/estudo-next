@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-
 export function Header() {
+    const [scroll, setScroll] = useState(false);
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScroll(window.scrollY > 50);
+        });
+    }, []);
     return(
-        <header className="header_area">
+        <header className={scroll ? "header_area navbar_fixed" : "header_area"}>
         <div className="top_menu row m0">
             <div className="container">
                 <div className="float-right">
@@ -34,14 +39,12 @@ export function Header() {
                 <div className="container">
                     <Link href="/"><a className="navbar-brand logo_h"><Image src="/img/logo.png" width={178}
         height={47}/></a></Link>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="icon-bar"></span>
-                        <span className="icon-bar"></span>
-                        <span className="icon-bar"></span>
-                    </button>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
                     
                     <div className="collapse navbar-collapse offset" id="navbarSupportedContent">
-                        <ul className="nav navbar-nav menu_nav ml-auto">
+                        <ul className="nav navbar-nav d-flex justify-content-end w-100">
                             <li className="nav-item"><Link href="/"><a className="nav-link">Home</a></Link></li> 
                             <li className="nav-item"><Link href="/sobre-nos"><a className="nav-link">Sobre Nós</a></Link></li> 
                             <li className="nav-item"><Link href="/"><a className="nav-link">Produtos</a></Link></li> 
@@ -62,3 +65,4 @@ export function Header() {
     </header>
     )
 }
+

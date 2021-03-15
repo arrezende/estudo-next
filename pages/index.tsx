@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import {Header} from '../Components/Header'
 import { Slider } from '../Components/Slider'
 import { Card } from '../Components/Card'
 import { Cta } from '../Components/Cta'
 import { Footer } from '../Components/Footer'
+
 
 export default function Home() {
   return (
@@ -14,6 +14,7 @@ export default function Home() {
         
       </Head>
       <Header />
+      
       <Slider
         item={['/666.png', '/fff.png']}  
       />
